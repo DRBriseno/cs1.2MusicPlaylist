@@ -13,8 +13,8 @@ class Song:
   
   # TODO: Create a setter method for the next_song attribute, called set_title. Make sure titles are type cased to strings and are Title Cased.
   def set_title(self,title):
-    self.title = str(title)
-    #how to TitleCase
+    self.title = str(title.title())
+    #TitleCased?
 
 
   # TODO: Create a getter method for the next_song attribute, called get_next_song
@@ -23,8 +23,8 @@ class Song:
 
 
   # TODO: Create a setter method for the next_song attribute, called set_next_song
-  def set_next_song(self,__next_song):
-    self.__next_song = __next_song
+  def set_next_song(self,next_title):
+    self.__next_song = next_title
 
 
   # TODO: Using the __str___ dunder method, return a string of the song title.
@@ -34,4 +34,4 @@ class Song:
 
   # TODO: Using the __repr__ dunder method, return a string formatted as the following:'Song Title -> Next Song Title'
   def __repr__(self):
-    return str(self.__title > self.__next_song) 
+    return f"{self.__title} -> {self.__next_song}" 
